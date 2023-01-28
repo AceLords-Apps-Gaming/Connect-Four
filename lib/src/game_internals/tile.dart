@@ -19,5 +19,13 @@ class Tile {
   }
 
   @override
+  int get hasCode => Object.hash(col, row);
+
+  @override
+  bool operator ==(Object other) {
+    return other is Tile && other.col == col && other.row == row;
+  }
+
+  @override
   String toString() => "[$col,$row]";
 }

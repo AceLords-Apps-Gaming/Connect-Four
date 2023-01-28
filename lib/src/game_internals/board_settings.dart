@@ -10,4 +10,8 @@ class BoardSetting {
   int totalTiles() {
     return rows * cols;
   }
+
+  int winCondition() {
+    return 4;
+  }
 }
