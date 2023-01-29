@@ -1,7 +1,7 @@
 # Connect Four Flutter Game
 A connect four game built with flutter casual games toolkit
 
-![Screenshot](screenshot-c4.jpg)
+![Screenshot](screenshot.jpg)
 
 
 A starter game in Flutter with all the bells and whistles
