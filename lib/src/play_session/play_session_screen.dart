@@ -101,6 +101,10 @@ class _PlaySessionScreenState extends State<PlaySessionScreen> {
                         const Spacer(),
                         GameBoard(boardSetting: boardSetting),
                         const Spacer(),
+                        Consumer<BoardState>(
+                            builder: (context, value, child) =>
+                                Text(value.noticeMessage)),
+                        const Spacer(),
                         ElevatedButton.icon(
                           onPressed: () =>
                               context.read<BoardState>().clearBoard(),
@@ -109,13 +113,6 @@ class _PlaySessionScreenState extends State<PlaySessionScreen> {
                             size: 24,
                           ),
                           label: Text('Reset'),
-                        ),
-                        const Spacer(),
-                        Consumer<BoardState>(
-                          builder: (context, value, child) => Column(children: [
-                            Text('Player: ${value.playerTaken}'),
-                            Text('AI: ${value.aiTaken}'),
-                          ]),
                         ),
                         const Spacer(),
                       ],
